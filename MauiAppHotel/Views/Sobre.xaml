@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Gray900}">
+
+    <Grid RowDefinitions="*, Auto" Padding="10">
+
+        <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                             Grid.Row="0"
+                             Padding="10">
+            
+            <Label 
+            Text="Sobre a Desenvolvedora!"
+            FontFamily="SilkscreenBold"
+            FontSize="25"
+            TextColor="#4cc2b4"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+            
+            
+            <Frame Padding="10" BackgroundColor="{StaticResource Gray900}" BorderColor="{StaticResource Gray600}">
+                <Grid RowDefinitions="auto, auto, auto, auto" ColumnDefinitions="*, 2*" >
+            <Image Grid.Row="0" Grid.Column="0"
+            Source="perfil.png"
+            HeightRequest="120"
+            Aspect="AspectFit"
+            HorizontalOptions="Center">
+            </Image>
+
+                <Label Grid.Row="0" Grid.Column="1"
+                    Padding="10"
+                    TextColor="White"
+                    FontFamily="Teko"
+                       
+                    Text="Sou estudante de Desenvolvimento de Sistemas na ETEC. Estou aprendendo sobre programação e tecnologia, e gosto de aplicar meus conhecimentos em projetos práticos. Estou animada para crescer na área e contribuir com soluções inovadoras."
+                    FontSize="14"/>
+
+                   
+                    <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Padding="5">
+                        <HorizontalStackLayout>
+                            <Image Source="java.png" HeightRequest="30" WidthRequest="30" />
+                            <Label Text="Java" FontSize="11" VerticalOptions="Center" TextColor="White" FontFamily="Silkscreen"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Padding="5">
+                            <Image Source="javascript.png" HeightRequest="30" WidthRequest="30" />
+                            <Label Text="JavaScript" FontSize="11" VerticalOptions="Center" TextColor="White" FontFamily="Silkscreen" />
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Padding="5">
+                            <Image Source="html.png" HeightRequest="30" WidthRequest="30" />
+                            <Label Text="HTML" FontSize="11" VerticalOptions="Center" TextColor="White" FontFamily="Silkscreen"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Padding="5">
+                            <Image Source="css.png" HeightRequest="30" WidthRequest="30" />
+                            <Label Text="CSS" FontSize="11" VerticalOptions="Center" TextColor="White" FontFamily="Silkscreen"/>
+                        </HorizontalStackLayout>
+                    </StackLayout>
+                    
+                    <StackLayout Grid.Row="3" Grid.Column="0" Orientation="Horizontal" Padding="10">
+                        <HorizontalStackLayout Padding="5">
+                            <Image Source="php.png" HeightRequest="30" WidthRequest="30" />
+                            <Label Text="PHP" FontSize="11" VerticalOptions="Center" TextColor="White" FontFamily="Silkscreen"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Padding="5">
+                            <Image Source="mysql.png" HeightRequest="30" WidthRequest="30" />
+                            <Label Text="MySQL" FontSize="11" VerticalOptions="Center" TextColor="White" FontFamily="Silkscreen"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Padding="5">
+                            <Image Source="csharp.png" HeightRequest="30" WidthRequest="30" />
+                            <Label Text="C#" FontSize="11" VerticalOptions="Center" TextColor="White" FontFamily="Silkscreen"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Padding="5">
+                        <Image Source="python.png" HeightRequest="30" WidthRequest="30" />
+                        <Label Text="Python" FontSize="11" VerticalOptions="Center" TextColor="White" FontFamily="Silkscreen"/>
+                        </HorizontalStackLayout>
+                    </StackLayout>
+
+                    
+
+
+
+                </Grid>
+             </Frame>
+    </VerticalStackLayout>
+    
+    
+    </Grid>
+</ContentPage>
