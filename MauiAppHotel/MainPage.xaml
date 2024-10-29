@@ -15,6 +15,7 @@
 
             <Label
                 Text="Hello, World!"
+                FontFamily="Chango"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
