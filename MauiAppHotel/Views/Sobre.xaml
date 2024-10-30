@@ -6,11 +6,15 @@
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="{StaticResource Gray900}">
 
-    <Grid RowDefinitions="*, Auto" Padding="10">
+    <Grid RowDefinitions="*, Auto" Padding="5">
+
+        
 
         <VerticalStackLayout VerticalOptions="CenterAndExpand"
                              Grid.Row="0"
-                             Padding="10">
+                             Padding="1">
+            
+            
             
             <Label 
             Text="Sobre a Desenvolvedora!"
@@ -22,24 +26,40 @@
             
             
             <Frame Padding="10" BackgroundColor="{StaticResource Gray900}" BorderColor="{StaticResource Gray600}">
-                <Grid RowDefinitions="auto, auto, auto, auto" ColumnDefinitions="*, 2*" >
-            <Image Grid.Row="0" Grid.Column="0"
-            Source="perfil.png"
-            HeightRequest="120"
-            Aspect="AspectFit"
-            HorizontalOptions="Center">
-            </Image>
+                
+                <Grid RowDefinitions="auto, auto, auto, auto, auto" ColumnDefinitions="*, 2*" >
 
-                <Label Grid.Row="0" Grid.Column="1"
+                    <Frame Grid.Row="0" Grid.Column="0"
+                           WidthRequest="123"
+                           HeightRequest="120"
+                           CornerRadius="10"  
+                           Padding="0"
+                           IsClippedToBounds="True"
+                           HorizontalOptions="Center">
+
+                        <Image Source="perfil.png"
+                               HeightRequest="130"
+                               WidthRequest="123"
+                               Aspect="AspectFill"
+                               HorizontalOptions="Center" />
+                    </Frame>
+
+                    <Label Grid.Row="0" Grid.Column="1"
                     Padding="10"
                     TextColor="White"
-                    FontFamily="Teko"
+                    FontFamily="Silkscreen"
                        
-                    Text="Sou estudante de Desenvolvimento de Sistemas na ETEC. Estou aprendendo sobre programação e tecnologia, e gosto de aplicar meus conhecimentos em projetos práticos. Estou animada para crescer na área e contribuir com soluções inovadoras."
-                    FontSize="14"/>
+                    Text="Me chamo Glauciane. Sou estudante de Desenvolvimento de Sistemas na ETEC. Estou aprendendo sobre programação e tecnologia, e gosto de aplicar meus conhecimentos em projetos práticos. Estou animada para crescer na área e contribuir com soluções inovadoras."
+                    FontSize="10"/>
 
-                   
-                    <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Padding="5">
+                    <Label Grid.Row="1" Grid.Column="0" 
+                           Text="Estudando: "
+                           Padding="0,10,0,0"
+                           TextColor="#4cc2b4"
+                           FontFamily="Silkscreen"/>
+
+
+                    <StackLayout Grid.Row="2" Grid.Column="0" Orientation="Horizontal" Padding="5,0,0,0">
                         <HorizontalStackLayout>
                             <Image Source="java.png" HeightRequest="30" WidthRequest="30" />
                             <Label Text="Java" FontSize="11" VerticalOptions="Center" TextColor="White" FontFamily="Silkscreen"/>
@@ -60,8 +80,8 @@
                             <Label Text="CSS" FontSize="11" VerticalOptions="Center" TextColor="White" FontFamily="Silkscreen"/>
                         </HorizontalStackLayout>
                     </StackLayout>
-                    
-                    <StackLayout Grid.Row="3" Grid.Column="0" Orientation="Horizontal" Padding="10">
+
+                    <StackLayout Grid.Row="3" Grid.Column="0" Orientation="Horizontal" Padding="5,0,0,0">
                         <HorizontalStackLayout Padding="5">
                             <Image Source="php.png" HeightRequest="30" WidthRequest="30" />
                             <Label Text="PHP" FontSize="11" VerticalOptions="Center" TextColor="White" FontFamily="Silkscreen"/>
@@ -74,21 +94,148 @@
 
                         <HorizontalStackLayout Padding="5">
                             <Image Source="csharp.png" HeightRequest="30" WidthRequest="30" />
-                            <Label Text="C#" FontSize="11" VerticalOptions="Center" TextColor="White" FontFamily="Silkscreen"/>
+                            <Label Text="C Sharp" FontSize="11" VerticalOptions="Center" TextColor="White" FontFamily="Silkscreen"/>
                         </HorizontalStackLayout>
+                        
                         <HorizontalStackLayout Padding="5">
                         <Image Source="python.png" HeightRequest="30" WidthRequest="30" />
                         <Label Text="Python" FontSize="11" VerticalOptions="Center" TextColor="White" FontFamily="Silkscreen"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 
-                    
+                    <StackLayout Grid.Row="4" Grid.Column="0" Orientation="Vertical" Padding="0,5,0,0">
+                        <BoxView Grid.Row="4" Grid.Column="0"
+                             BackgroundColor="{DynamicResource Gray600}"
+                             HeightRequest="2"
+                             WidthRequest="1300">
+                        </BoxView> 
+
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="4" Grid.Column="0" Orientation="Vertical" Grid.ColumnSpan="2" Padding="0,0,0,0">
+                        <Grid RowDefinitions="*,*" ColumnDefinitions="*,*">
+
+                            <Label Grid.Row="0"
+                           Text="Links: "
+                           Padding="0,20,0,0" 
+                           TextColor="#4cc2b4"
+                           FontFamily="Silkscreen"/>
+
+                        <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Padding="0,0,0,0">
+                            <HorizontalStackLayout Padding="5">
+                                <Image Source="github.png" HeightRequest="30" WidthRequest="30" />
+                                <Label Text="Github"
+                                       FontSize="11"
+                                       Padding="5"
+                                       VerticalOptions="Center"
+                                       TextColor="White"
+                                       FontFamily="Silkscreen">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </HorizontalStackLayout>
+                        </StackLayout>
+                        
+                        <StackLayout Grid.Row="1" Grid.Column="2" Orientation="Horizontal" Padding="0,0,0,0">
+                            <HorizontalStackLayout Padding="5">
+                                <Image Source="linkedin.png" HeightRequest="30" WidthRequest="30" />
+                                <Label Text="LinkedIn"
+                                       FontSize="11"
+                                       Padding="5"
+                                       VerticalOptions="Center"
+                                       TextColor="White"
+                                       FontFamily="Silkscreen">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </HorizontalStackLayout>
+                        </StackLayout>
+
+                        </Grid>
+
+                    </StackLayout>
+
+
 
 
 
                 </Grid>
              </Frame>
-    </VerticalStackLayout>
+
+            <Label 
+            Text="Sobre o Aplicativo!"
+            FontFamily="SilkscreenBold"
+            FontSize="25"
+            Padding="0,10,0,0"
+            TextColor="#4cc2b4"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+
+            <Frame Padding="10" BackgroundColor="{StaticResource Gray900}" BorderColor="{StaticResource Gray600}">
+
+                <Grid RowDefinitions="auto, auto, auto, auto, auto" ColumnDefinitions="*, 2*" >
+
+                    <Label Grid.Row="0" Grid.ColumnSpan="2"
+                           FontSize="11">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span TextColor="White" FontFamily="Silkscreen" Text="Este é um aplicativo de hotel criado como atividade para o curso de Desenvolvimento de Sistemas. Desenvolvido em " />
+                                <Span FontFamily="Silkscreen" TextColor="#4cc2b4" Text="2024"  />
+                                <Span TextColor="White" Text="." />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <StackLayout Grid.Row="2" Grid.Column="0" Orientation="Vertical" Padding="0,5,0,0">
+                        <BoxView Grid.Row="4" Grid.Column="0"
+                                 BackgroundColor="{DynamicResource Gray600}"
+                                 HeightRequest="2"
+                                 WidthRequest="1300">
+                        </BoxView>
+                    </StackLayout>
+                    
+                    <Label Grid.Row="3" Grid.ColumnSpan="2"
+                           Padding="0,5,0,0"
+                           FontSize="20"
+                           FontFamily="Silkscreen"
+                           Text="Projeto no Github: "
+                           TextColor="#4cc2b4"/>
+
+                    <StackLayout Grid.Row="4" Grid.Column="0" Orientation="Horizontal" Padding="0,0,0,0">
+                        <HorizontalStackLayout Padding="5">
+                            <Image Source="link.png" HeightRequest="15" WidthRequest="15" />
+                            <Label Grid.Row="4" 
+                                   Text="MauiAppHotel"
+                                   Padding="5,0,0,0"
+                                   FontSize="13"
+                                   VerticalOptions="Center"
+                                   TextColor="White"
+                                   FontFamily="Silkscreen">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </HorizontalStackLayout>
+                    </StackLayout>
+
+                    
+                </Grid>
+            </Frame>
+            <StackLayout Grid.Row="0" Grid.ColumnSpan="2" Orientation="Vertical" Padding="0,30,0,0">
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Button Text="Voltar para o Início"
+                            FontFamily="Silkscreen" 
+                            FontAttributes="Bold" 
+                            FontSize="11" 
+                            BackgroundColor="#4cc2b4" 
+                            WidthRequest="200" 
+                            Pressed="Button_Pressed" />
+                </HorizontalStackLayout>
+            </StackLayout>
+
+        </VerticalStackLayout>
     
     
     </Grid>
