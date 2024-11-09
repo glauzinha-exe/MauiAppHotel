@@ -16,7 +16,9 @@ namespace MauiAppHotel
                     fonts.AddFont("Chango-Regular.ttf", "Chango");
                     fonts.AddFont("Silkscreen-Regular.ttf", "Silkscreen");
                     fonts.AddFont("Silkscreen-Bold.ttf", "SilkscreenBold");
-                    fonts.AddFont("Teko-Regular.ttf", "Teko");
+                    fonts.AddFont("Teko-Regular.ttf", "Teko"); 
+                    fonts.AddFont("Coustard-Regular.ttf", "Coustard");
+                    fonts.AddFont("Coustard-Black.ttf", "CoustardBlack");
 
                 });
 

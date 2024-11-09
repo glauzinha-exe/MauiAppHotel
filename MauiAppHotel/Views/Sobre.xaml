@@ -8,14 +8,14 @@
 
     <Grid RowDefinitions="*, Auto" Padding="5">
 
-        
+
 
         <VerticalStackLayout VerticalOptions="CenterAndExpand"
                              Grid.Row="0"
                              Padding="1">
-            
-            
-            
+
+
+
             <Label 
             Text="Sobre a Desenvolvedora!"
             FontFamily="SilkscreenBold"
@@ -23,10 +23,10 @@
             TextColor="#4cc2b4"
             VerticalOptions="Center" 
             HorizontalOptions="Center"/>
-            
-            
+
+
             <Frame Padding="10" BackgroundColor="{StaticResource Gray900}" BorderColor="{StaticResource Gray600}">
-                
+
                 <Grid RowDefinitions="auto, auto, auto, auto, auto" ColumnDefinitions="*, 2*" >
 
                     <Frame Grid.Row="0" Grid.Column="0"
@@ -96,10 +96,10 @@
                             <Image Source="csharp.png" HeightRequest="30" WidthRequest="30" />
                             <Label Text="C Sharp" FontSize="11" VerticalOptions="Center" TextColor="White" FontFamily="Silkscreen"/>
                         </HorizontalStackLayout>
-                        
+
                         <HorizontalStackLayout Padding="5">
-                        <Image Source="python.png" HeightRequest="30" WidthRequest="30" />
-                        <Label Text="Python" FontSize="11" VerticalOptions="Center" TextColor="White" FontFamily="Silkscreen"/>
+                            <Image Source="python.png" HeightRequest="30" WidthRequest="30" />
+                            <Label Text="Python" FontSize="11" VerticalOptions="Center" TextColor="White" FontFamily="Silkscreen"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 
@@ -108,7 +108,7 @@
                              BackgroundColor="{DynamicResource Gray600}"
                              HeightRequest="2"
                              WidthRequest="1300">
-                        </BoxView> 
+                        </BoxView>
 
                     </StackLayout>
 
@@ -121,37 +121,37 @@
                            TextColor="#4cc2b4"
                            FontFamily="Silkscreen"/>
 
-                        <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Padding="0,0,0,0">
-                            <HorizontalStackLayout Padding="5">
-                                <Image Source="github.png" HeightRequest="30" WidthRequest="30" />
-                                <Label Text="Github"
+                            <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Padding="0,0,0,0">
+                                <HorizontalStackLayout Padding="5">
+                                    <Image Source="github.png" HeightRequest="30" WidthRequest="30" />
+                                    <Label Text="Github"
                                        FontSize="11"
                                        Padding="5"
                                        VerticalOptions="Center"
                                        TextColor="White"
                                        FontFamily="Silkscreen">
-                                    <Label.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                                    </Label.GestureRecognizers>
-                                </Label>
-                            </HorizontalStackLayout>
-                        </StackLayout>
-                        
-                        <StackLayout Grid.Row="1" Grid.Column="2" Orientation="Horizontal" Padding="0,0,0,0">
-                            <HorizontalStackLayout Padding="5">
-                                <Image Source="linkedin.png" HeightRequest="30" WidthRequest="30" />
-                                <Label Text="LinkedIn"
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </HorizontalStackLayout>
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="1" Grid.Column="2" Orientation="Horizontal" Padding="0,0,0,0">
+                                <HorizontalStackLayout Padding="5">
+                                    <Image Source="linkedin.png" HeightRequest="30" WidthRequest="30" />
+                                    <Label Text="LinkedIn"
                                        FontSize="11"
                                        Padding="5"
                                        VerticalOptions="Center"
                                        TextColor="White"
                                        FontFamily="Silkscreen">
-                                    <Label.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
-                                    </Label.GestureRecognizers>
-                                </Label>
-                            </HorizontalStackLayout>
-                        </StackLayout>
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </HorizontalStackLayout>
+                            </StackLayout>
 
                         </Grid>
 
@@ -162,7 +162,7 @@
 
 
                 </Grid>
-             </Frame>
+            </Frame>
 
             <Label 
             Text="Sobre o Aplicativo!"
@@ -195,7 +195,7 @@
                                  WidthRequest="1300">
                         </BoxView>
                     </StackLayout>
-                    
+
                     <Label Grid.Row="3" Grid.ColumnSpan="2"
                            Padding="0,5,0,0"
                            FontSize="20"
@@ -220,7 +220,7 @@
                         </HorizontalStackLayout>
                     </StackLayout>
 
-                    
+
                 </Grid>
             </Frame>
             <StackLayout Grid.Row="0" Grid.ColumnSpan="2" Orientation="Vertical" Padding="0,30,0,0">
@@ -236,7 +236,7 @@
             </StackLayout>
 
         </VerticalStackLayout>
-    
-    
+
+
     </Grid>
 </ContentPage>

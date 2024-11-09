@@ -4,10 +4,36 @@
              x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
              Title="ContratacaoHospedagem"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResource Gray100}">
-
+             BackgroundColor="{StaticResource Gray900}"
+             >
     
-    <Grid RowDefinitions="*, Auto" Padding="10">
+
+
+    <Grid>
+        
+      
+        <Image Source="hotel.jpg"
+               Aspect="Center" 
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Opacity="10" />
+        
+        <BoxView HorizontalOptions="Fill"
+                 VerticalOptions="Fill"
+                 Opacity="0.5">
+          
+            <BoxView.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="black" Offset="0.0" />
+                    <GradientStop Color="#2B3A67" Offset="1.0" />
+                    
+                </LinearGradientBrush>
+            </BoxView.Background>
+        </BoxView>
+
+
+
+        <Grid RowDefinitions="*, Auto" Padding="10">
 
         
         <VerticalStackLayout VerticalOptions="CenterAndExpand"
@@ -15,24 +41,26 @@
                              Padding="10">
             <Label 
                 Text="Cálculo da Diária!"
-                FontSize="29"
+                FontSize="40"
                 TextColor="{StaticResource Primary}"
-                FontFamily="Chango"
+                FontFamily="Coustard"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
 
-            <Frame Padding="10">
+                <Frame Padding="10" BackgroundColor="#D6D0C7" Opacity="0.90">
                 <VerticalStackLayout>
 
                 <Grid RowDefinitions="auto, auto"
                       ColumnDefinitions="2*, *, 2*">
 
                     <Label Grid.Row="0" Grid.Column="0"
-                           Text="Adultos"
-                           FontSize="25"/>
+                           Text="Adultos:"
+                           FontSize="25"
+                           Opacity="0.80"
+                           TextColor="#2B3A67"/>
 
                     <Label Grid.Row="0" Grid.Column="1"
-                           TextColor="{StaticResource Primary}"
+                           TextColor="White"
                            Text="{Binding Value}"
                            FontSize="25"
                            BindingContext="{x:Reference stp_adultos}"/>
@@ -48,11 +76,13 @@
                     </Stepper>
 
                     <Label Grid.Row="1" Grid.Column="0"
-                            Text="Crianças"
-                           FontSize="25"/>
+                            Text="Crianças:"
+                           FontSize="25"
+                           TextColor="#2B3A67"
+                           Opacity="0.80"/>
 
                     <Label Grid.Row="1" Grid.Column="1"
-                           TextColor="{StaticResource Primary}"
+                           TextColor="White"
                            Text="{Binding Value}"
                            FontSize="25"
                            BindingContext="{x:Reference stp_criancas}"/>
@@ -67,33 +97,44 @@
                     </Stepper>
                 </Grid>
 
-                <Label Text="Escolha uma Suíte"
+                <Label Text="Escolha sua Suíte"
                        FontSize="30"
                        FontAttributes="Bold" 
                        TextColor="{StaticResource Primary}"/>
 
                 <Picker x:Name=" pck_quarto"
-                        Title="Selecione sua Acomodação">
+                        BackgroundColor="#E5E5E5"
+                        
+                        Title="Selecione sua Acomodação"
+                        ItemDisplayBinding="{Binding Descricao}">
 
                 </Picker>
 
                 <Frame Padding="10"
-                       Margin="10">
+                       Margin="10"
+                       BackgroundColor="#9BA7C7"
+                       Opacity="0.90">
                     <VerticalStackLayout>
                         <Label Text="Período da Estadia"
-                               FontSize="Medium"/>
+                               FontSize="Medium"
+                               TextColor="#2B3A67"/>
                         <HorizontalStackLayout>
                             <Label Text="Check-in:    "
-                                   FontSize="Body"/>
+                                   FontSize="Body"
+                                   TextColor="#2B3A67"/>
                             <DatePicker x:Name="dtpck_checkin"
-                                        Format="dd/MM/yyyy"/>
+                                          DateSelected="dtpck_checkin_DateSelected"
+                                        Format="dd/MM/yyyy"
+                                        TextColor="white"/>
 
                         </HorizontalStackLayout>
                         <HorizontalStackLayout>
-                            <Label Text="Check-out: "
-                                   FontSize="Body"/>
-                            <DatePicker x:Name="dtpck_checkout"
-                                        Format="dd/MM/yyyy"/>
+                                    <Label Text="Check-out: "
+                                   FontSize="Body"
+                                   TextColor="#2B3A67"/>
+                                    <DatePicker x:Name="dtpck_checkout"
+                                        Format="dd/MM/yyyy"
+                                        TextColor="White"/>
 
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
@@ -111,5 +152,5 @@
                 Grid.Row="1"
                 Grid.ColumnSpan="2"/>
     </Grid>
-
+    </Grid>
 </ContentPage>
